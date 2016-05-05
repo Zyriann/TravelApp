@@ -11,6 +11,8 @@ using Microsoft.Data.Entity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.PlatformAbstractions;
 using MVC6.Models;
+using AutoMapper;
+using WebApplication1.View_Model;
 
 namespace WebApplication1
 {
@@ -48,6 +50,12 @@ namespace WebApplication1
             {
                 await context.Response.WriteAsync("Hello World!");
             });
+
+            Mapper.Initialize(config =>
+            {
+                config.CreateMap<Trip, TripViewModel>().ReverseMap();
+            }
+        );
         }
 
         // Entry point for the application.

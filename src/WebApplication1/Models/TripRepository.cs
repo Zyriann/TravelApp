@@ -14,9 +14,14 @@ namespace WebApplication1.Models
             db = repository;
         }
 
-        public void GetAllTrips()
+        public IEnumerable<Trip> GetAllTrips()
         {
-            return IEnumerable<Trip> GetAllTrips;
+            return db.Trip.ToList;
+        }
+
+        public void InsertData(Trip val)
+        {
+            db.Trip.Add(val);
         }
 
     }
