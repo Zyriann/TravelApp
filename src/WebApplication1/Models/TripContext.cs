@@ -23,5 +23,10 @@ namespace WebApplication1.Models
         {
             Database.EnsureCreated();
         }
+
+        public static implicit operator TripContext(TripRepository v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
