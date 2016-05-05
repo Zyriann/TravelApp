@@ -16,7 +16,7 @@ namespace WebApplication1.Models
 
         public void GetAllTrips()
         {
-            return IEnumerable < Trip > GetAllTrips;
+            return IEnumerable<Trip> GetAllTrips;
         }
 
     }
