@@ -11,6 +11,13 @@ namespace WebApplication1.Controllers
 {
     public class HomeController : Controller
     {
+        private TripRepository rep;
+
+        public HomeController(TripRepository repository)
+        {
+            rep = repository;
+        }
+
         // GET: /<controller>/
         public IActionResult Index()
         {
